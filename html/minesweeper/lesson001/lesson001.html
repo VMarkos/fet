@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../../css/style.css" media="screen"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="../../../scripts/utils.js"></script>
+        <title>
+            Front-end Tutorials
+        </title>
+    </head>
+    <body>
+        <div class="navbar-container">
+            <div class="icons-container">
+                <a href="../../../index.html"><i class="navbar-icon fa fa-home fa-2x"></i></a>
+            </div>
+            <div class="title-container">FeT</div>
+            <div class="icons-container">
+                <a href="https://aftermaths.gr"><i class="navbar-icon fa fa-wordpress fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="main-content-container">
+            <div class="main-content-centering">
+                <h1>Μάθημα 1ο &mdash; Τα Βασικά</h1>
+                <h2>Εισαγωγή</h2>
+                <div class="p-container">
+                    <p>
+                        Πιθανότατα έχετε ακούσει πολλές φορές να γίνεται λόγος για την HTML, τη CSS, την 
+                        JavaScript, αλλά τι είναι αυτά τα πράγματα, πέρα από περίπλοκα αρκτικόλεξα και σύνθετες 
+                        λέξεις που εμπλέκουν νησιά της <a href="https://en.wikipedia.org/wiki/Java">Ινδονησίας</a>;
+                    </p>
+                    <h3>Πρώτα λίγο μπλα-μπλα...</h3>
+                    <p>
+                        Ας πάρουμε τα πράγματα με τη σειρά:
+                    </p>
+                    <ul>
+                        <li>
+                            Η <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> (HyperText Markup Language)
+                            είναι ίσως ο ακρογωνιαίος λίθος του διαδικτύου &mdash; κι αυτό δεν είναι υπερβολή. Μέσω της 
+                            HTML καθορίζουμε τη βασική δομή μίας ιστοσελίδας καθώς και το τι «σημαίνουν» τα όσα αυτή 
+                            περιέχει (θα γίνει σαφέστερο αυτό στην πορεία).
+                        </li>
+                        <li>
+                            Η <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> (Cascading Style Sheets),
+                            όπως αποκαλύπτει δειλά-δειλά και το όνομά της, καθορίζει εν πολλοίς το στυλ το οποίο θα έχει η 
+                            ιστοσελίδα μας. Τα χρώματα, το πώς θα μοιάζουν αλλά και το πώς θα κινούνται τα πράγματα. Η 
+                            CSS, με λίγα λόγια, καθορίζει τη μορφή που θα πάρουν τα πράγματα στην οθόνη μας &mdash; ή όπου
+                            αλλού.
+                        </li>
+                        <li>
+                            Η <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> είναι μία 
+                            εύπεπτη (για τις ηλεκτρονικές συσκευές και, δη, για τους browsers) γλώσσα προγραμματισμού 
+                            που μας βοηθάει να προσθέσουμε λειτουργικότητα στις ιστοσελίδες μας. Αν και πολλές φορές, στοιχειώδη
+                            λειτουργικότητα μπορούμε να προσθέσουμε και μέσω της CSS, ο απλούστερος και πιο αποδοτικός (συνήθως) τρόπος
+                            να το κάνουμε είναι μέσω της JavaScript. Να πούμε και κάπου εδώ ότι, παρά το πολύ κοντινό όνομα, η 
+                            κυρία JavaScript έχει ελάχιστη συγγένεια με την γνωστή και μη εξαιρετέα στους κύκλους του προγραμματισμού, 
+                            <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>.
+                        </li>
+                    </ul>
+                    <h3>Ο Ναρκαλιευτής</h3>
+                    <p>
+                        Τώρα που ξεκαθαρίσαμε κάποια πράγματα, καιρός να αρχίσουμε να ασχολούμαστε με τον Ναρκαλιευτή μας.
+                        Σε αυτό το πρώτο μέρος θα εστιάσουμε λίγο στο να αντιγράψουμε το βασικό στυλ του παιχνιδιού χρησιμοποιώντας
+                        HTML και CSS. Αρχικά, ας θυμηθούμε πώς έμοιαζε ο Ναρκαλιευτής των 
+                        <a href="https://en.wikipedia.org/wiki/Windows_XP">Windows XP</a>:
+                    </p>
+                    <div class="img-legend-container">
+                        <div class="img-container">
+                            <img src="./ms_demo.png">
+                            <div class="legend-container">
+                                Το θυμάστε;
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Πριν ξεκινήσουμε να αντιγράφουμε, ας περιηγηθούμε λίγο στα διάφορα στοιχεία που έχει η 
+                        παραπάνω εικόνα:
+                    </p>
+                    <ul>
+                        <li>
+                            Πάνω αριστερά υπάρχει ένας μετρητής που μας ενημερώνει για το πόσες ακόμα νάρκες
+                            μένουν να «ανακαλυφθούν».
+                        </li>
+                        <li>
+                            Πάνω δεξιά υπάρχει ένα μικρό και διακριτικό χρονόμετρο που μετράει (σε δευτερόλεπτα), 
+                            τον χρόνο που παίζουμε.
+                        </li>
+                        <li>
+                            Ανάμεσα στα δύο αυτά χρονόμετρα υπάρχει μία χαρούμενη (προς το παρόν) φατσούλα, η οποία μας
+                            ενημερώνει για το status του παιχνιδιού. Για την ακρίβεια, όσο είναι ακόμα χαμογελαστή, δεν 
+                            έχουμε πατήσει ακόμα κάποια νάρκη, όταν φοράει γυαλιά ηλίου σημαίνει πως έχουμε κερδίσει το 
+                            παιχνίδι ενώ όταν κάνει την ψόφια σημαίνει ότι έχουμε χάσει.
+                        </li>
+                        <li>
+                            Στο κυρίως μέρος βλέπουμε το κλασσικό ταμπλό του παιχνιδιού, που περιέχει κελιά που δεν έχουν 
+                            ακόμα αποκαλυφθεί, κελιά που έχουμε σημειώσει ως ναρκοθετημένα καθώς και κελιά που περιέχουν 
+                            κάποιον χρωματιστό αριθμό μέσα τους. Σε περίπτωση που δεν το θυμάστε, οι αριθμοί υποδηλώνουν 
+                            το πλήθος των ναρκών που υπάρχουν στα γειτονικά κελιά &mdash; σημειώστε το αυτό για επόμενο μάθημα.
+                        </li>
+                    </ul>
+                </div>
+                <h2>Ταμπλό και...μέσα</h2>
+                <div class="p-container">
+                    <p>
+                        Εντάξει, οι τίτλοι των ενοτήτων είναι cringe, αλλά έχουν εγκριθεί από τον αρχισυντάκτη 
+                        μας, οπότε, τι να κάνουμε τώρα! Θα ξεκινήσουμε την περιήγησή μας αντιράφοντας το βασικό 
+                        ταμπλό του παιχνιδιού, αφήνοντας προς το παρόν τόσο τους μετρητές όσο και τα νουμεράκια 
+                        στην άκρη.
+                    </p>
+                    <h3>Κάνοντας την αρχή</h3>
+                    <p>
+                        Το πρώτο πράγμα που πρέπει να κάνουμε είναι να πάμε κάπου και να φτιάξουμε έναν φάκελο 
+                        μέσα στον οποίο θα βρίσκεται ό,τι έχει σχέση με το project μας. Δημιουργούμε, λοιπόν, 
+                        έναν φάκελο, ας τον πούμε <code>minesweeper-tutorial</code> και μέσα σε αυτόν δημιουργούμε 
+                        ένα αρχείο με το όνομα <code>index.html</code>. Όπως φαντάζεστε, σε αυτό το αρχείο θα 
+                        γράψουμε τη βασική μας HTML. Αρχικά, προσθέτουμε στο αρχείο τις ακόλουθες γραμμές κώδικα:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;
+            Minesweeper
+        &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+                    </div>
+                    <p>
+                        Οι παραπάνω γραμμές κώδικα δεν έχουν κάποιο ιδιαίτερο περιεχόμενο, πέρα από το ότι 
+                        αρχικοποιούν, κατά κάποιον τρόπο, το περιεχόμενο της σελίδας μας. Αναλυτικότερα:
+                    </p>
+                    <ul>
+                        <li>
+                            Η γραμμή <code>&lt;!DOCTYPE html&gt;</code> μας ενημερώνει ότι ο τύπος του 
+                            εγγράφου είναι HTML. Άλλοι πιθανοί τύποι θα μπορούσσαν να είναι, για παράδειγμα,
+                            <a href="https://en.wikipedia.org/wiki/XML">XML</a> ή 
+                            <a href="https://commons.wikimedia.org/wiki/SVG_examples">SVG</a>.
+                        </li>
+                        <li>
+                            Η γραμμή <code>&lt;html&gt;</code>, που ζευγαρώνει με την τελευταία γραμμή, 
+                            <code>&lt;/html&gt;</code>, οριοθετεί το τμήμα του κώδικά μας που θα περιέχει το κυρίως μέρος της
+                            σελίδας μας. Γενικά, οι δομές της μορφής <code>&lt;κάτι&gt;</code> και <code>&lt;/κάτι&gt;</code> 
+                            λέγονται <b>tags</b>, και, όπως θα δούμε και στη συνέχεια, οριοθετούν διάφορες βασικές δομές που
+                            χρησιμοποιούμε κατά τη σχεδίαση μίας ιστοσελίδας.
+                        </li>
+                        <li>
+                            Το tag <code>&lt;head&gt;</code> οριοθετεί την <b>κεφαλή</b> της σελίδας μας. Πρακτικά, μέσα σε αυτό
+                            το tag γράφουμε διάφορες πληροφορίες που αφορούν όλη τη σελίδα μας. Τέτοιες μπορεί να είναι, για 
+                            παράδειγμα:
+                            <ul>
+                                <li>
+                                    Η κωδικοποίηση των χαρακτήρων που θα χρησιμοποιήσουμε, που εδώ καθορίζεται από τη γραμμή
+                                    <code>&lt;meta charset="UTF-8"&gt;</code> &mdash; περισσότερα για την κωδικοποίηση UTF-8
+                                    μπορείτε να βρείτε <a href="https://developer.mozilla.org/en-US/docs/Glossary/UTF-8">εδώ</a>.
+                                </li>
+                                <li>
+                                    Ο τίτλος της σελίδας, ο οποίος είναι αυτό το διακριτικό κειμενάκι που φαίνεται 
+                                    στην καρτέλα των περισσότερων browsers και καθορίζεται με τη βοήθεια του tag 
+                                    <code>&lt;title&gt;</code>.
+                                </li>
+                                <li>
+                                    Το «στυλ» της σελίδας, το οποίο συνήθως καθορίζεται από κάποιο αρχείο CSS, 
+                                    όπως θα δούμε και παρακάτω.
+                                </li>
+                                <li>
+                                    Κάποιο script, για παράδειγμα, της JavaScript, το οποίο χρειάζεται από κάποιο 
+                                    τμήμα της σελίδας μας &mdash; αυτό θα το δούμε σε επόμενο μάθημα.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Το tag <code>&lt;body&gt;</code> οριοθετεί το κυρίως μέρος (σώμα) της σελίδας μας, δηλαδή 
+                            εκεί που θα περιέχονται όλα όσα καθορίζουν τη δομή της.
+                        </li>
+                    </ul>
+                    <p>
+                        Όπως φαντάζεστε, αν πάτε τώρα να ανοίξετε το αρχείο αυτό με κάποιον browser, το μόνο 
+                        που θα δείτε είναι μία κενή σελίδα, καθώς δεν έχουμε τοποθετήσει τίποτα μέσα στο 
+                        σώμα της σελίδας μας. Πρέπει, λοιπόν, σιγά-σιγά, να αρχίσουμε να βάζουμε περιεχόμενο.
+                    </p>
+                    <h3>Λίγο στυλ...</h3>
+                    <p>
+                        Το πρώτο που θα κάνουμε θα είναι να δώσουμε ένα ωραίο χρώμα στο φόντο της σελίδας μας. Αυτό 
+                        δεν έχει τόσο λειτουργική σημασία, όσο περισσότερο αισθητική. Για να το κάνουμε αυτό, 
+                        θα χρειαστεί να γράψουμε λίγη CSS. Δημιουργούμε, λοιπόν, έναν φάκελο <code>css</code> μέσα 
+                        στον φάκελο <code>minesweeper-tutorial</code> και μέσα στον ολοκαίνουργιο φάκελό μας 
+                        δημιουργούμε ένα αρχείο που το ονομάζουμε <code>style.css</code>. Μέσα σε αυτό το 
+                        αρχείο γράφουμε τα εξής:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+<pre>html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background: #4585ff;
+}</pre>
+                    </div>
+                    <p>
+                        Έπειτα, πάμε στην κεφαλή του αρχείου <code>index.html</code> και προσθέτουμε την ακόλουθη
+                        γραμμή:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        ...
+        &lt;link rel="stylesheet" type="text/css" href="./css/style.css" media="screen"/&gt;
+        ...
+    &lt;/head&gt;
+    ...
+&lt;/html&gt;</pre>
+                    </div>
+                    <p>
+                        Αν τώρα ανοίξετε (ή ξαναφορτώσετε) το αρχείο <code>index.html</code> στον browser σας, 
+                        θα δείτε ότι ολόκληρη η καρτέλα έχει πάρει ένα ήπιο μπλε χρώμα. Ας εξηγήσουμε λίγο τι κάναμε 
+                        παραπάνω:
+                    </p>
+                    <ul>
+                        <li>
+                            Η γραμμή που προσθέσαμε στον <code>index.html</code> φορτώνει όλο το περιεχόμενο του 
+                            αρχείου <code>./css/style.css</code> στη σελίδα μας. Προσέξτε πώς δηλώνουμε ότι το 
+                            αρχείο βρίσκεται σε έναν υποφάκελο, χρησιμοποιώντας την <code>/</code>.
+                        </li>
+                        <li>
+                            Στο αρχείο <code>style.css</code> καθορίζουμε αρχικά ότι το <code>margin</code> και το 
+                            <code>padding</code> (όπως λέμε στο χωριό μου) των tags <code>&lt;html&gt;</code> και <code>&lt;body&gt;</code>
+                            θα είναι μηδενικό. Το τι είναι αυτά τα δύο πράγματα θα το συζητήσουμε σε πολύ λίγο, αλλά, αν 
+                            βιάζεστε πια τόσο πολύ, μπορείτε να δοκιμάσετε να σβήσετε αυτές τις δύο γραμμές, και να ξαναφορτώσετε
+                            τη σελίδα μας. Τι παρατηρείτε;
+                        </li>
+                        <li>
+                            Παρακάτω καθορίζουμε το χρώμα του φόντου του tag <code>&lt;body&gt;</code> (δηλαδή του σώματος της σελίδας μας),
+                            δίνοντας έναν δεκαεξαδικό κωδικό. Γενικά, υπάρχουν πάρα πολλοί τρόποι να κωδικοποιήσουμε τα χρώματα, 
+                            τους οποίους θα αναλύσουμε στην πορεία των μαθημάτων μας. Για περισσότερα, μπορείτε να δείτε
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Applying_color#how_to_describe_a_color">εδώ</a>.
+                        </li>
+                    </ul>
+                    <p>
+                        Ώρα, σιγά-σιγά, να αρχίσουμε να περνάμε στην ουσία. Αρχικά, θα δημιουργήσουμε τις «υποδομές»
+                        που θα φιλοξενήσουν το ταμπλό του παιχνιδιού μας. Γι' αυτόν τον σκοπό, τροποποιούμε 
+                        το <code>index.html</code> ως εξής:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="./css/style.css" media="screen"/&gt;
+        &lt;title&gt;
+            Minesweeper
+        &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Test
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+                    </div>
+                    <p>
+                        Ακολούθως, προσθέτουμε και στο <code>style.css</code> τα εξής:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+                        <pre>html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: #4585ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</pre>
+                    </div>
+                    <p>
+                        Το ζουμί εδώ βρίσκεται στο τι έχουμε κάνει στην CSS μας. Αρχικά, δηλώσαμε ότι το tag 
+                        <code>&lt;html&gt;</code> θα πρέπει να πιάνει το 100% της σελίδας μας, γεγονός που 
+                        θα μας βοηθήσει να «κεντράρουμε» το περιεχόμενό της. Έπειτα, προσθέσαμε κάποιους ακόμα 
+                        κανόνες για το <code>&lt;body&gt;</code>:
+                    </p>
+                    <ul>
+                        <li>
+                            Αρχικά, του ζητήσαμε να έχει ύψος τουλάχιστον όσο και η σελίδα μας, μέσα από τον 
+                            κανόνα <code>min-height: 100%;</code>.
+                        </li>
+                        <li>
+                            Έπειτα, του ζητήσαμε να κάνει...flex, μέσα από τον κανόνα <code>display: flex;</code>.
+                            Απλά, όταν λέμε "flex" στην περίπτωσή μας δεν εννοούμε αυτό που ίσως 
+                            <a href="https://www.slang.gr/lemma/25937-fleksaro">καταλάβατε</a>,
+                            αλλά ότι θέλουμε το σώμα να απλωθεί (εκ προοιμίου, οριζοντίως), όσο μπορεί.
+                        </li>
+                        <li>
+                            Με τον κανόνα <code>justify-content: center;</code> ζητάμε από το σώμα της σελίδας μας
+                            να τοποθετήσει το περιεχόμενο στο κέντρο (οριζοντίως) ενώ με τον κανόνα
+                            <code>align-items: center;</code> τοποθετούμε το περιεχόμενο στο κέντρο (καθέτως).
+                        </li>
+                    </ul>
+                    <p>Συνεχίζεται...</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="powered-by">Powered by <a href="https://aftermaths.gr">aftermaths.gr</a></div>
+            <div class="icons-container wider-gap">
+                <div class="footer-icon-container">
+                    <a href="https://facebook.com/aftermaths.gr"><i class="navbar-icon fa fa-facebook fa-2x"></i></a>
+                </div>
+                <div class="footer-icon-container">
+                    <a href="https://instagram.com/aftermathsgr/"><i class="navbar-icon fa fa-instagram fa-2x"></i></a>
+                </div>
+                <div class="footer-icon-container">
+                    <a href="https://twitter.com/aftermathsgr"><i class="navbar-icon fa fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

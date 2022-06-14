@@ -1,0 +1,21 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: #4585ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-container {
+    display: flex;
+    justify-content: center;
+}
