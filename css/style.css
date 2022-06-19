@@ -284,3 +284,12 @@ code {
     height: 100%;
     padding: 5px;
 }
+
+/* Miscellaneous */
+
+.iframe-container {
+    width: 100%;
+    min-height: 300px;
+    border: none;
+    border-radius: 20px;
+}

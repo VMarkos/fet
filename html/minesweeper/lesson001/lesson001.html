@@ -319,7 +319,154 @@ body {
                             <code>align-items: center;</code> τοποθετούμε το περιεχόμενο στο κέντρο (καθέτως).
                         </li>
                     </ul>
-                    <p>Συνεχίζεται...</p>
+                    <p>
+                        Ανοίξτε το αρχείο <code>index.html</code> και παρατηρήστε ότι στο κέντρο της μπλε σελίδας
+                        μας τώρα υπάρχει ένα «Test». Στη θέση αυτού του θα θέλαμε εμείς να εμφανίσουμε ένα μικρό 
+                        πλέγμα που να θυμίζει αυτό του ναρκαλιευτή. Αυτό μπορούμε να το πετύχουμε με τις ακόλουθες 
+                        τροποποιήσεις στα δύο αρχεία μας:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+                          <pre>&lt;body&gt;
+    &lt;div class="main-content-container"&gt;
+        &lt;div class="minesweeper-grid-container"&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+            &lt;div class="minesweeper-cell"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</pre>
+                </div>
+                <p>
+                    Και στο αρχείο <code>style.css</code>:
+                </p>
+                <div class="code-block-container">
+                    <div class="code-block-copy-icon-container">
+                        <i class="fa fa-clipboard fa-2x"></i>
+                    </div>
+                      <pre>.minesweeper-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.minesweeper-cell {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border: 2px solid black;
+}</pre>
+                </div>
+                <p>
+                    Στο αρχείο <code>index.html</code> δεν προσθέσαμε τίποτα το ιδιαίτερο πέρα από ένα 
+                    <code>&lt;div&gt;</code> που θα αγκαλιάσει το πλέγμα μας και 16 <code>&lt;div&gt;</code>
+                    που θα παίξουν τον ρόλο των κελιών. Στην CSS τώρα, η κλάση <code>.minsweeper-grid-container</code>
+                    είναι μία κλάση που αποτελείται από ένα πλέγμα (grid) το οποίο θα έχει, όπως υποδηλώνει και ο κανόνας
+                    <code>grid-template-columns: 1fr 1fr 1fr 1fr</code>, θα αποτελείται από τέσσερις στήλες ίσου πλάτους.
+                    Το <code>fr</code> δεν είναι παρά μία σχετική μονάδα μέτρησης που χρησιμοποιούμε όταν θέλουμε να 
+                    δηλώσουμε το πλάτος των στηλών (ή το ύψος των γραμμών) ενός πλέγματος. Αν δοκιμάσετε λίγο να 
+                    πειραματιστείτε με διάφορους συνδυασμούς θα καταλάβετε ακριβώς πώς δουλεύει &mdash; αν δε θέλετε να 
+                    πειραματιστείτε, πρώτον, ντροπή σας, δεύτερον, μπορείτε να βρείτε περισσότερα 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">εδώ</a>.
+                </p>
+                <p>
+                    Να σημειώσουμε κάπου εδώ πως μία εναλλακτική στον παραπάνω κανόνα, για να μη γράφουμε συνεχώς 
+                    <code>1fr</code> είναι το <code>repeat</code>. Έτσι, θα μπορούσαμε να ξαναγράψουμε τον κανόνα μας
+                    ως εξής: <code>grid-template-columns: repeat(4, 1fr);</code>. Το συντακτικό είναι αρκετά απλό, 
+                    καθώς στο πρώτο όρισμα δίνουμε το πλήθος των επαναλήψεων και στο δεύτερο το περιεχόμενο κάθε 
+                    επανάληψης.
+                </p>
+
+                <p>
+                    Πάμε τώρα στην κλάση <code>minesweeper-cell</code>. Εκεί έχουμε καθορίσει ρητά το πλάτος (width) και 
+                    το ύψος (height) κάθε στοιχείου στα 50px ενώ έχουμε δώσει κι ένα ενδεικτικό χρώμα στο φόντο κάθε 
+                    κελιού. Τέλος, έχουμε καθορίσει το κάδρο του κάθε κελιού (border) να είναι μαύρο (black), να μην έχει 
+                    κάποιο ιδιαίτερο σχέδιο (solid) και να έχει πλάτος 2px. Αν θέλετε να μάθετε περισσότερα 
+                    για τις διάφορες μονάδες μέτρησης στην CSS, μπορείτε να ρίξετε μια ματιά 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/dimension">εδώ</a>.
+                </p>
+                </div>
+                <h2>Και τα χρώματα;</h2>
+                <div class="p-container">
+                    <p>
+                        Ως εδώ, έχουμε φτιάξει ένα κοκκινόμαυρο πλέγμα στη μέση μίας μπλε σελίδας. Όχι και πολύ 
+                        κοντά στο συνηθισμένο ρετρό στυλ του ναρκαλιευτή μας, θα έλεγε κανείς... Λοιπόν, καιρός 
+                        να πιάσουμε λίγη σοβαρή δουλειά. Αρχικά, πρέπει να βρούμε ποια χρώματα χρειαζόμαστε 
+                        για να μοιάζουν τα κελιά μας με αυτά του ναρακαλιευτή. Για να το κάνουμε αυτό βρίσκουμε 
+                        πρώτα μία εικόνα στο διαδίκτυο (ή όπου αλλού μπορούμε) στην οποία να φαίνονται καθαρά 
+                        κάποια κελιά από το παιχνίδι μας, όπως για παράδειγμα παρακάτω:
+                    </p>
+                    <div class="img-legend-container">
+                        <div class="img-container">
+                            <img src="./ms_demo.png">
+                            <div class="legend-container">
+                                Κάπου την έχουμε ξαναδεί αυτή την εικόνα, ε;
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Έπειτα, είτε χρησιμοποιώντας κάποιο πρόγραμμα επεξεργασίας εικόνας είτε κάποιον online 
+                        color picker, αρχίζουμε να παίζουμε με τα pixels της εικόνας, μέχρι να βρούμε τα χρώματα 
+                        που μας ενδιαφέρουν. Ενδεικτικά, ένας ενδιαφέρον online color picker είναι ο:
+                        <a href="https://imagecolorpicker.com/">imagecolorpicker.com</a>, ενώ σίγουρα τη 
+                        δουλειά σας μπορείτε να κάνετε και με ένα λογισμικό όπως το 
+                        <a href="https://www.gimp.org/">GIMP</a> &mdash; αναλυτικές οδηγίες 
+                        μπορείτε να βρείτε <a href="https://docs.gimp.org/2.10/en/gimp-tool-color-picker.html">εδώ</a>.
+                        Με τη βοήθεια, λοιπόν, της τεχνολογίας, τα χρώματα που θα χρειαστούμε για να χρωματίσουμε τα κελιά
+                        μας (ακούγεται λάθος, έτσι;) είναι τα εξής:
+                    </p>
+                    <ul>
+                        <li>
+                            <code>#c6c6c6</code> για το κελί,
+                        </li>
+                        <li>
+                            <code>#808080</code> για τη «σκοτεινή» σκιά του κελιού &mdash; δεξιά και κάτω,
+                        </li>
+                        <li>
+                            λευκό για τη «φωτεινή» σκιά του κελιού &mdash; αριστερά και πάνω.
+                        </li>
+                    </ul>
+                    <p>
+                        Αλλάζοντας, λοιπόν, λίγο την κλάση <code>.minesweeper-cell</code>:
+                    </p>
+                    <div class="code-block-container">
+                        <div class="code-block-copy-icon-container">
+                            <i class="fa fa-clipboard fa-2x"></i>
+                        </div>
+                          <pre>.minesweeper-cell {
+    width: 50px;
+    height: 50px;
+    background: #c6c6c6;
+    border-bottom: solid 4px #808080;
+    border-right: solid 4px #808080;
+    border-top: solid 4px white;
+    border-left: solid 4px white;
+}</pre>
+                    </div>
+                    <p>
+                        Ως τώρα, αυτό που έχουμε φτιάξει μοιάζει κάπως έτσι:
+                    </p>
+                    <iframe class="iframe-container" src="../actual_minesweeper/index.html"></iframe>
+                    <p>
+                        Τέλεια, τα έχουμε καταφέρει μια χαρά ως τώρα! Δοκιμάστε τώρα να κλικάρετε πάνω σε κάποιο 
+                        από τα κελιά του πλέγματός μας... Τι συμβαίνει; Πολύ σωστά! Τίποτα απολύτως! Αυτό 
+                        ήταν αναμενόμενο, καθώς δεν έχουμε ζητήσει σε κάποιο σημείο να συμβαίνει κάτι όταν 
+                        κλικάρουμε κάπως σε κάποιο κελί. Αλλά αυτά θα τα πούμε στο επόμενό μας μάθημα...
+                    </p>
                 </div>
             </div>
         </div>
